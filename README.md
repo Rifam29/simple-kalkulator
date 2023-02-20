@@ -5,4 +5,4 @@
 3. Pastikan yang di input adalah sebuah angka **WAJIB**
 
 link pengumpulan klik 
-![https://forms.gle/4FpiWzyr1PqgiZL39](disini)
+[disini](https://forms.gle/4FpiWzyr1PqgiZL39)
