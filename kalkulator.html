@@ -16,7 +16,10 @@
     <input type="radio" name="operator" id="tambah" onclick="tambah()">tambah<br>
     <input type="radio" name="operator" id="kurang" onclick="kurang()">kurang<br>
     <input type="radio" name="operator" id="kali" onclick="kali()">kali<br>
-    <input type="radio" name="operator" id="bagi" onclick="bagi()">bagi<br><br>
+    <input type="radio" name="operator" id="bagi" onclick="bagi()">bagi<br>
+    <input type="radio" name="operator" id="modulus" onclick="modulus()">modulus<br>
+    <input type="radio" name="operator" id="persen" onclick="persen()">persen<br>
+    <input type="radio" name="operator" id="pangkat" onclick="pangkat()">pangkat<br><br>
   <label>Hasil:</label>
     <input type="text" id="hasil" disabled>
     <input type="button" value="reset" onclick="resetBtn()" id="btnReset">
@@ -28,7 +31,7 @@
         nilaiDua = document.getElementById('input2').value;
         if (nilaiSatu == '' || nilaiDua == '')
         {
-          return alert('Nilai harus terisi');
+          return alert('Nilai harus terisi boy');
         } else {
           nilai = [nilaiSatu,nilaiDua];
           return nilai;
@@ -68,6 +71,24 @@
         prosesBagi = parseInt(nilai[0]) / parseInt(nilai[1]);
         return printHasil(prosesBagi);
       }
+      function modulus()
+      {
+        nilai = ambilNilai();
+        prosesModulus = parseInt(nilai[0]) % parseInt(nilai[1]);
+        return printHasil(prosesModulus);
+      }
+      function persen()
+      {
+        nilai = ambilNilai();
+        prosesPersen = parseFloat(nilai[0]) / (nilai[1]);
+        return printHasil(prosesPersen);
+      }
+      function pangkat()
+      {
+        nilai = ambilNilai();
+        prosesPangkat = Math.pow(parseInt(nilai[0]), (nilai[1] ));
+        return printHasil(prosesPangkat);
+      }
 
       function resetBtn()
       {
@@ -78,6 +99,8 @@
         document.getElementById('kurang').checked = false;
         document.getElementById('kali').checked = false;
         document.getElementById('bagi').checked = false;
+        document.getElementById('modulus').checked = false;
+        document.getElementById('persen').checked = false;
       }
     </script>
 </body>
